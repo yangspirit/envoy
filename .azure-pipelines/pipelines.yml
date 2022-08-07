@@ -38,7 +38,7 @@ stages:
             https://api.github.com/repos/phlax/envoy/releases \
             -d '{"tag_name":"release-test-000","target_commitish":"main", "name": "release-test-000", "body": "Release testing - please ignore", "draft":false, "prerelease":false, "generate_release_notes":false}'
       workingDirectory: $(Build.SourcesDirectory)
-      displayName: "Run format checks"
+      displayName: "Test release pipeline"
 
     - task: Cache@2
       inputs:
