@@ -35,7 +35,7 @@ stages:
             -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: token $(GitHubPublicRepoOnlyAccessToken)" \
-            https://api.github.com/repos/phlax/envoy/releases \
+            https://api.github.com/repos/envoyproxy/envoy/releases \
             -d '{"tag_name":"release-test-000","target_commitish":"main", "name": "release-test-000", "body": "Release testing - please ignore", "draft":false, "prerelease":false, "generate_release_notes":false}'
       workingDirectory: $(Build.SourcesDirectory)
       displayName: "Test release pipeline"
