@@ -36,7 +36,7 @@ stages:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: token ${GITHUB_TOKEN}" \
             https://api.github.com/repos/envoyproxy/envoy-release-test/releases \
-            -d '{"tag_name":"release-test-000","target_commitish":"main", "name": "release-test-000", "body": "Release testing - please ignore", "draft":false, "prerelease":false, "generate_release_notes":false}'
+            -d '{"tag_name":"release-test-001","target_commitish":"main", "name": "release-test-001", "body": "Release testing - please ignore", "draft":false, "prerelease":false, "generate_release_notes":false}'
       env:
         GITHUB_TOKEN: $(GitHubPublicRepoOnlyAccessToken)
       workingDirectory: $(Build.SourcesDirectory)
