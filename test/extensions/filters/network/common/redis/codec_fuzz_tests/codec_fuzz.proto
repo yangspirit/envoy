@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package test.extensions.filters.network.common.redis;
+
+message RespData {
+  oneof resp_selector {
+    string simple_string = 1;
+    string error = 2;
+    sint64 integer = 3;
+    string bulk_string = 4;
+  }
+}
+
+message Array {
+  repeated RespData resp_data = 1;
+}
+
+// Construct inputs of type RESP array containing nested arrays for fuzz testing
+message CodecArrayFuzzTestCase {
+  repeated Array arrays = 1;
+}
